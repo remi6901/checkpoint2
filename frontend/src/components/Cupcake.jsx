@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
 export default function Cupcake({ cupcake }) {
   return (
+    <Link to={`/cupcakes/${cupcake.id}`}>
     <div className="cupcake-container">
       <div className="cupcake">
         <img src={cupcake.url} alt="accessory" />
@@ -40,6 +42,7 @@ export default function Cupcake({ cupcake }) {
 
       <div className="cupcake-name">{cupcake.name}</div>
     </div>
+    </Link>
   );
 }
 
